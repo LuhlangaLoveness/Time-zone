@@ -15,9 +15,9 @@ header {
   text-align: center;
   font-size: 22px;
 }
-#select-box {
+#select-box-cities {
   padding: 5px 5px 5px 5px;
   border-radius: 5px;
-  background: #f9ecec;
+  background: #fffdfb;
   margin: 0px 0px 0px 15px;
 }
