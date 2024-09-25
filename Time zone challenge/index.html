@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time zones</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-10-year-range.min.js"></script>
+    <style>
+      #container {
+        max-width: 480px;
+        background: #f5f1fe;
+        display: block;
+        margin: 100px auto;
+        padding: 10px 10px 100px 10px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      header {
+        display: block;
+        margin: auto;
+        padding: 20px 10px 30px 10px;
+        text-align: center;
+        font-size: 22px;
+      }
+      #select-box-cities {
+        padding: 5px 5px 5px 5px;
+        border-radius: 5px;
+        background: #fffdfb;
+        margin: 0px 0px 0px 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header>Time Zones Fun Times</header>
+      <main>
+        <label>Listed below are different time zones</label>
+        <select name="" id="select-box-citie">
+          <option value="">Please select a city</option>
+          <option value="Europe/Paris">🇫🇷 Paris</option>
+          <option value="Asia/Toyko">🇯🇵 Tokyo</option>
+          <option value="Australia/Sydney">🇦🇺 Sydney</option>
+        </select>
+      </main>
+    </div>
+    <script>
+      function showSelectedCity(event) {
+        if (event.target.length > 0) {
+          let currentTime = moment()
+            .tz(event.target.value)
+            .format("dddd, Do MMMM, YYYY H:m A");
+          alert(`It is ${currentTime} in ${event.target.value}`);
+        }
+      }
+
+      let selectCity = document.querySelector("#select-box-cities");
+      selectCity = addEventListener("change", showSelectedCity);
+    </script>
+  </body>
+</html>
