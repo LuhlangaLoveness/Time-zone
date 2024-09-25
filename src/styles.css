@@ -1,0 +1,23 @@
+#container {
+  max-width: 480px;
+  background: #f5f1fe;
+  display: block;
+  margin: 100px auto;
+  padding: 10px 10px 100px 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.1);
+}
+header {
+  display: block;
+  margin: auto;
+  padding: 20px 10px 30px 10px;
+  text-align: center;
+  font-size: 22px;
+}
+#select-box {
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+  background: #f9ecec;
+  margin: 0px 0px 0px 15px;
+}
